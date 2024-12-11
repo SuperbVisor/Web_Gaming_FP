@@ -39,7 +39,7 @@ def get_wib_timestamp():
 
 @app.route('/')
 def home():
-    return render_template('login.html')
+    return render_template('knowing.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():

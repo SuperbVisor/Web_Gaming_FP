@@ -8,36 +8,62 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <style>
         html, body {
-    height: 100%; /* Pastikan background mencakup seluruh halaman */
-    margin: 0; /* Hilangkan margin default */
-    display: flex;
-    flex-direction: column;
+            height: 100%; /* Pastikan background mencakup seluruh halaman */
+            margin: 0; /* Hilangkan margin default */
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            background-image: url("{{ url_for('static', filename='imgs/bg.jpg') }}");
+            background-size: cover; /* Membuat gambar menutupi seluruh layar */
+            background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+            background-attachment: fixed; /* Membuat background tetap di tempat saat halaman digulir */
+            background-position: center; /* Menempatkan background di tengah */
+        }
+
+        .container {
+            flex: 1; /* Membuat area konten mengambil ruang yang tersedia */
+            background-color: rgba(255, 255, 255, 0.7); /* Opsional: Tambahkan overlay semi-transparan pada konten */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            backdrop-filter: blur(10px);
+            color: #060707;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 14px;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tambahkan CSS tombol */
+        button, .btn {
+    height: 50px;
+    margin: 5px;
+    width: 120px;
+    background: #333;
+    justify-content: center;
+    align-items: center;
+    font-family: Consolas, Courier New, monospace;
+    border: solid #404c5d 1px;
+    font-size: 16px;
+    color: rgb(161, 161, 161);
+    transition: 500ms;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #2e2d2d, #212121);
 }
 
-body {
-    background-image: url("{{ url_for('static', filename='imgs/bg.jpg') }}");
-    background-size: cover; /* Membuat gambar menutupi seluruh layar */
-    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
-    background-attachment: fixed; /* Membuat background tetap di tempat saat halaman digulir */
-    background-position: center; /* Menempatkan background di tengah */
+button:hover, .btn:hover {
+    color: #d6d6d6;
+    transition: 500ms;
 }
 
-.container {
-    flex: 1; /* Membuat area konten mengambil ruang yang tersedia */
-    background-color: rgba(255, 255, 255, 0.7); /* Opsional: Tambahkan overlay semi-transparan pada konten */
-    padding: 20px;
-    border-radius: 10px;
+button:active, .btn:active {
+    color: #d6d6d6;
+    transition: 100ms;
 }
-
-footer {
-    backdrop-filter: blur(10px);
-    color: #060707;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 14px;
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
-}
-
     </style>
 </head>
 <body>
@@ -73,7 +99,7 @@ footer {
                     <div class="card-body">
                         <h5 class="card-title">Profile</h5>
                         <p class="card-text">Manage your profile settings and preferences.</p>
-                        <a href="#" class="btn btn-primary">Go to Profile</a>
+                        <a href="#" class="btn">Profile</a>
                     </div>
                 </div>
             </div>
@@ -82,7 +108,7 @@ footer {
                     <div class="card-body">
                         <h5 class="card-title">~Game~</h5>
                         <p class="card-text">Select the game you want to play.</p>
-                        <a href="/pilih_game" class="btn btn-primary">Play Now</a>
+                        <a href="/pilih_game" class="btn">Play</a>
                     </div>
                 </div>
             </div>
@@ -96,7 +122,7 @@ footer {
                                 <label for="message">Your Message:</label>
                                 <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <button type="submit" class="btn">Message</button>
                         </form>
                     </div>
                 </div>
