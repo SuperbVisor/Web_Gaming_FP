@@ -7,7 +7,14 @@
     <link rel="icon" href="{{ url_for('static', filename='imgs/icon_web.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <style>
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    
         body {
+            display: flex;
             background-color: #f8f9fa;
             background-image: url("{{ url_for('static', filename='imgs/bg.jpg') }}");
             background-size: cover; /* Mengatur agar gambar menutupi seluruh halaman */
@@ -110,7 +117,4 @@
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     
 </body>
-<footer>
-    Copyright ©2024 <a href="#">Lancar Jaya Security</a>
-</footer>
 </html>

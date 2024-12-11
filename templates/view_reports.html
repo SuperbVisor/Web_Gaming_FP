@@ -7,7 +7,14 @@
     <link rel="icon" href="{{ url_for('static', filename='imgs/icon_web.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <style>
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    
         body {
+            display: flex;
             background-image: url("{{ url_for('static', filename='imgs/report_bg.jpg') }}");
             background-size: cover; /* Mengatur agar gambar menutupi seluruh halaman */
             background-repeat: no-repeat; /* Menghindari pengulangan gambar */
@@ -41,8 +48,8 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Sender</th>
+                    <th>Recipient</th>
                     <th>Message</th>
                     <th>Timestamp</th>
                 </tr>
