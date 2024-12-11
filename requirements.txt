@@ -1,5 +1,4 @@
-Flask==2.3.3
-Flask-MySQLdb==1.0.1
+flask
 Authlib==1.2.0
 pytz==2023.3
 gunicorn==21.2.0
