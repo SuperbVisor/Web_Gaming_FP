@@ -21,11 +21,11 @@ google = oauth.register(
     client_kwargs={'scope': 'openid email profile'}
 )
 
-# Konfigurasi MySQL
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''  # Ganti dengan password MySQL Anda
 app.config['MYSQL_DB'] = 'db_webfp'
+
 
 mysql = MySQL(app)
 
