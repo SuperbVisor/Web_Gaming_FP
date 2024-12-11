@@ -21,10 +21,11 @@ google = oauth.register(
     client_kwargs={'scope': 'openid email profile'}
 )
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''  # Ganti dengan password MySQL Anda
-app.config['MYSQL_DB'] = 'db_webfp'
+app.config['MYSQL_HOST'] = 'gamestationspro.mysql.database.azure.com'
+app.config['MYSQL_USER'] = 'Egarathwal'
+app.config['MYSQL_PASSWORD'] = ''  # Ganti {your_password} dengan password Anda
+app.config['MYSQL_DB'] = 'db_webfp'  # Ganti {your_database} dengan nama database Anda
+app.config['MYSQL_PORT'] = 3306  # Port default MySQL
 
 
 mysql = MySQL(app)
